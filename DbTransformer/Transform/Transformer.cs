@@ -43,7 +43,7 @@ namespace DbTransformer.Transform
             patternBuilder.Append("^");
             for (int i = 0; i < groupsCount; i++)
             {
-                patternBuilder.Append($"([^{Regex.Escape(Delimiter)}]+)");
+                patternBuilder.Append($"([^{Regex.Escape(Delimiter)}]*)");
                 // Delimiter
                 if (i != groupsCount - 1)
                 {
